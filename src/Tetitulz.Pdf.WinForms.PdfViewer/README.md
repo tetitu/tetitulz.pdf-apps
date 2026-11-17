@@ -253,6 +253,28 @@ viewer.CommandExecuting += (s, e) =>
 
 ---
 
+## Deploying: SkiaSharp's files
+The library renders through SkiaSharp, which the package brings from nuget.org with the library.
+SkiaSharp is cross-platform and, from 4.x, ships a native debug-symbol file of ~95 MB for each
+Windows architecture; a Windows-only control needs neither those nor the Linux and macOS libraries.
+**The package leaves them out of the host's output**: its `build/` targets drop SkiaSharp's Linux and
+macOS libraries and native `.pdb` files, and nothing of any other package. The Windows
+`libSkiaSharp.dll` for x86, x64 and arm64 is kept.
+
+| Host output | Untrimmed | Trimmed |
+|---|---|---|
+| .NET 10 build | 487 MB | 45 MB |
+| .NET Framework 4.8 build | 169 MB | 56 MB |
+| .NET 10 publish, `win-x64` | 118 MB | 23 MB |
+
+To keep everything (to debug inside `libSkiaSharp`, say), set in the host's project:
+```xml
+<PropertyGroup>
+  <TetitulzPdfViewerTrimSkiaSharp>false</TetitulzPdfViewerTrimSkiaSharp>
+</PropertyGroup>
+```
+Publishing for one architecture (`dotnet publish -r win-x64`) keeps that architecture's DLL alone.
+
 ## .NET Framework 4.6.2 notes
 - The control consumes the `netstandard2.0` builds of `Tetitulz.Pdf.*`. SkiaSharp's native
   `libSkiaSharp.dll` and BouncyCastle deploy automatically for **SDK-style (PackageReference)**

@@ -1,0 +1,50 @@
+<Project>
+
+  <!--
+    Imported into every project that references the package (packed as build/ and buildTransitive/).
+
+    The viewer runs on Windows alone, but the library it is built on is cross-platform, so SkiaSharp
+    arrives with its Linux and macOS libraries and, from 4.x, a native debug-symbol file of ~95 MB
+    for each Windows architecture. Copied to the output, they made a .NET 10 host's bin folder
+    487 MB and a win-x64 publish 118 MB; without them, 45 MB and 23 MB. These targets leave out
+    SkiaSharp's Linux and macOS libraries and its native .pdb files, and nothing of any other
+    package. The Windows libSkiaSharp.dll for each architecture is kept.
+
+    A host that wants them back (to debug inside libSkiaSharp, say) sets
+    <TetitulzPdfViewerTrimSkiaSharp>false</TetitulzPdfViewerTrimSkiaSharp>.
+  -->
+  <PropertyGroup>
+    <TetitulzPdfViewerTrimSkiaSharp Condition="'$(TetitulzPdfViewerTrimSkiaSharp)' == ''">true</TetitulzPdfViewerTrimSkiaSharp>
+  </PropertyGroup>
+
+  <!-- PackageReference hosts: the native assets NuGet resolved, each carrying its package's id. -->
+  <Target Name="TetitulzPdfViewerTrimSkiaSharpAssets"
+          AfterTargets="ResolvePackageAssets"
+          Condition="'$(TetitulzPdfViewerTrimSkiaSharp)' == 'true'">
+    <ItemGroup>
+      <RuntimeTargetsCopyLocalItems Remove="@(RuntimeTargetsCopyLocalItems)"
+          Condition="'%(RuntimeTargetsCopyLocalItems.NuGetPackageId)' == 'SkiaSharp.NativeAssets.Linux'
+                  Or '%(RuntimeTargetsCopyLocalItems.NuGetPackageId)' == 'SkiaSharp.NativeAssets.macOS'
+                  Or ('%(RuntimeTargetsCopyLocalItems.NuGetPackageId)' == 'SkiaSharp.NativeAssets.Win32'
+                      And '%(RuntimeTargetsCopyLocalItems.Extension)' == '.pdb')" />
+      <NativeCopyLocalItems Remove="@(NativeCopyLocalItems)"
+          Condition="'%(NativeCopyLocalItems.NuGetPackageId)' == 'SkiaSharp.NativeAssets.Linux'
+                  Or '%(NativeCopyLocalItems.NuGetPackageId)' == 'SkiaSharp.NativeAssets.macOS'
+                  Or ('%(NativeCopyLocalItems.NuGetPackageId)' == 'SkiaSharp.NativeAssets.Win32'
+                      And '%(NativeCopyLocalItems.Extension)' == '.pdb')" />
+    </ItemGroup>
+  </Target>
+
+  <!-- .NET Framework hosts: SkiaSharp's macOS package also copies its .dylib through a None item of
+       its own .targets, which no package-asset list carries. -->
+  <Target Name="TetitulzPdfViewerTrimSkiaSharpMacOSCopy"
+          BeforeTargets="AssignTargetPaths"
+          Condition="'$(TetitulzPdfViewerTrimSkiaSharp)' == 'true'">
+    <ItemGroup>
+      <None Remove="@(None)"
+          Condition="'%(None.Extension)' == '.dylib'
+                 And $([System.String]::Copy('%(None.FullPath)').ToLowerInvariant().Contains('skiasharp.nativeassets.macos'))" />
+    </ItemGroup>
+  </Target>
+
+</Project>

@@ -38,6 +38,16 @@
     <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Signing\Tetitulz.Pdf.Signing.csproj" />
   </ItemGroup>
 
+  <!-- Imported into the hosts' builds: leaves out SkiaSharp's Linux/macOS libraries and native .pdb
+       files, which a Windows-only control never loads (TetitulzPdfViewerTrimSkiaSharp=false keeps them).
+       build/ for a direct reference and packages.config, buildTransitive/ for a reference through
+       another package. Included explicitly: the outer build of a multi-targeted project, the one that
+       packs, has no default None items for an Update to reach. -->
+  <ItemGroup>
+    <None Remove="build\Tetitulz.Pdf.WinForms.PdfViewer.targets" />
+    <None Include="build\Tetitulz.Pdf.WinForms.PdfViewer.targets" Pack="true" PackagePath="build\;buildTransitive\" />
+  </ItemGroup>
+
   <ItemGroup>
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
       <_Parameter1>Tetitulz.Pdf.WinForms.PdfViewer.Tests</_Parameter1>
