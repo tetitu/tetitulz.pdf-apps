@@ -15,4 +15,15 @@
     <RepositoryUrl>https://github.com/tetitu/tetitulz.pdf-apps</RepositoryUrl>
   </PropertyGroup>
 
+  <PropertyGroup Label="Versioning">
+    <!-- This repository's v* tags version the package, and MinVer must not hand it the library's
+         version instead. MinVer caches one version per build, keyed by its settings and not by the
+         repository it read, so with the library's settings (prefix v, alpha.0) the first project to
+         ask decides for both repositories: the viewer once packed as the library's 1.1.5, and the
+         library's projects once as this repository's 0.0.0-alpha.0.N. A setting of our own, the
+         identifier of an untagged build, gives this repository its own key. Keep it different from
+         the library's. Directory.Build.props at the root sets the same for the demo and the tests. -->
+    <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
+  </PropertyGroup>
+
 </Project>
