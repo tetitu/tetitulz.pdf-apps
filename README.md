@@ -17,6 +17,8 @@ Each is held to the library's rules for a shipping assembly (`src/Directory.Buil
 library's), with its public API pinned under `tests/ApiSnapshots`.
 
 `demo/Viewer` is a minimal WinForms host for the control.
+[`samples/edge-to-edge-driver`](samples/edge-to-edge-driver/README.md) is a template printer driver
+package for a product built on `Printing`, whose pages print to the paper's edges.
 
 ## Building
 

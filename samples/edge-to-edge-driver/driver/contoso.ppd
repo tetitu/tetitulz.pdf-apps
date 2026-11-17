@@ -1,0 +1,76 @@
+*PPD-Adobe: "4.3"
+*% Contoso's PostScript printer description, read by Windows' PostScript class driver (MSxpsPS.dll)
+*% through contoso-manifest.ini. Written from Adobe's PPD File Format Specification 4.3 and Microsoft's
+*% v4 printer driver PPD keywords. A virtual printer has no hardware margins: every page size's
+*% imageable area is the whole sheet, so a program that clips to the printable area clips nothing.
+
+*FileVersion: "1.0"
+*FormatVersion: "4.3"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*Manufacturer: "Contoso"
+*ModelName: "Contoso PostScript Driver"
+*NickName: "Contoso PostScript Driver"
+*ShortNickName: "Contoso PostScript Driver"
+*Product: "(Contoso)"
+*PCFileName: "CONTOSO.PPD"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+
+*MSIsXPSDriver: True
+*MSXPSMaxCopies: "999"
+*MSPrintSchemaPrivateNamespaceURI: "http://schemas.contoso.example/printing/contoso-ps"
+
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 PageSetup *Resolution
+*DefaultResolution: 600dpi
+*Resolution 600dpi: "<< /HWResolution [600 600] >> setpagedevice"
+*CloseUI: *Resolution
+
+*% The sizes, each with its imageable area the whole sheet.
+*OpenUI *PageSize: PickOne
+*OrderDependency: 40 PageSetup *PageSize
+*DefaultPageSize: A4
+*PageSize A4: "featurebegin{<< /PageSize [595 842] >> setpagedevice}featurecleanup"
+*PageSize Letter: "featurebegin{<< /PageSize [612 792] >> setpagedevice}featurecleanup"
+*PageSize Legal: "featurebegin{<< /PageSize [612 1008] >> setpagedevice}featurecleanup"
+*PageSize A3: "featurebegin{<< /PageSize [842 1191] >> setpagedevice}featurecleanup"
+*PageSize A5: "featurebegin{<< /PageSize [420 595] >> setpagedevice}featurecleanup"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 40 PageSetup *PageRegion
+*DefaultPageRegion: A4
+*PageRegion A4: "featurebegin{<< /PageSize [595 842] >> setpagedevice}featurecleanup"
+*PageRegion Letter: "featurebegin{<< /PageSize [612 792] >> setpagedevice}featurecleanup"
+*PageRegion Legal: "featurebegin{<< /PageSize [612 1008] >> setpagedevice}featurecleanup"
+*PageRegion A3: "featurebegin{<< /PageSize [842 1191] >> setpagedevice}featurecleanup"
+*PageRegion A5: "featurebegin{<< /PageSize [420 595] >> setpagedevice}featurecleanup"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: A4
+*ImageableArea A4: "0 0 595 842"
+*ImageableArea Letter: "0 0 612 792"
+*ImageableArea Legal: "0 0 612 1008"
+*ImageableArea A3: "0 0 842 1191"
+*ImageableArea A5: "0 0 420 595"
+
+*DefaultPaperDimension: A4
+*PaperDimension A4: "595 842"
+*PaperDimension Letter: "612 792"
+*PaperDimension Legal: "612 1008"
+*PaperDimension A3: "842 1191"
+*PaperDimension A5: "420 595"
+
+*HWMargins: 0 0 0 0
+*LandscapeOrientation: Plus90
+*RequiresPageRegion All: True
+
+*OpenUI *PageOrientation: PickOne
+*DefaultPageOrientation: Portrait
+*PageOrientation Portrait: ""
+*PageOrientation Landscape: ""
+*CloseUI: *PageOrientation
+*MSPrintSchemaKeywordMap: PageOrientation *PageOrientation
+*MSPrintSchemaKeywordMap: PageOrientation Portrait *PageOrientation Portrait
+*MSPrintSchemaKeywordMap: PageOrientation Landscape *PageOrientation Landscape

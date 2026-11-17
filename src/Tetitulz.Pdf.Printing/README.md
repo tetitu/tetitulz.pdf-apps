@@ -95,6 +95,16 @@ The driver is Windows' own **Microsoft PS Class Driver** (`PrinterIdentity.Class
 Windows's driver store, unless the product ships its own: `driverPackage` is its signed INF relative to
 the program's folder, and `driverSigner` the thumbprint of the certificate its catalog is signed with.
 
+### Pages to the edges
+
+The class driver declares half an inch of hardware margin on every side, so a program that clips to
+the printable area cuts every page there and the PDF has a white border. For pages printed to their
+edges, ship your own driver package: the same class driver with a printer description that declares
+no margins, signed with your code-signing certificate. The repository's
+[`samples/edge-to-edge-driver`](https://github.com/tetitu/tetitulz.pdf-apps/tree/main/samples/edge-to-edge-driver)
+is a template for one, with the script that signs it. A printer already installed on the class driver
+moves to yours at the next `Install` (`NeedsDriverUpdate` tells when).
+
 ## Installing and removing the printer
 
 `Install(name)` and `Uninstall(name)` run `install-printer.ps1` and `uninstall-printer.ps1` from the
