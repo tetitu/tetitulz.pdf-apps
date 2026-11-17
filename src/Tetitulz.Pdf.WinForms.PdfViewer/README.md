@@ -4,8 +4,9 @@ An embeddable **WinForms `UserControl`** PDF viewer (desktop-viewer style), buil
 pure-managed `Tetitulz.Pdf` library. Consumable from **.NET Framework 4.6.2** hosts and modern .NET.
 
 **Targets:** `net462;net10.0-windows`
-**Dependencies:** `Tetitulz.Pdf.Base`, `Tetitulz.Pdf.Core`, `Tetitulz.Pdf.Encryption` (all
-netstandard2.0-capable; SkiaSharp + BouncyCastle ship net462-compatible assemblies).
+**Dependencies:** `Tetitulz.Pdf.Base`, `Tetitulz.Pdf.Core`, `Tetitulz.Pdf.Encryption`,
+`Tetitulz.Pdf.Signing` (all netstandard2.0-capable; SkiaSharp + BouncyCastle ship net462-compatible
+assemblies).
 
 ---
 

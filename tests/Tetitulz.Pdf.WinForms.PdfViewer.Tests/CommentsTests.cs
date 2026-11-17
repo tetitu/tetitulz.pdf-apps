@@ -12,7 +12,7 @@ using Tetitulz.Pdf.Base.Operations.Extraction;
 namespace Tetitulz.Pdf.WinForms.PdfViewer.Tests;
 
 /// <summary>
-/// The document's comments (GAPS.md §10a step 5): a Comments tab by page, a click going to one and
+/// The document's comments: a Comments tab by page, a click going to one and
 /// outlining it, its author, date and text on hover, and <see cref="PdfViewerControl.ShowComments"/>.
 /// </summary>
 public sealed class CommentsTests

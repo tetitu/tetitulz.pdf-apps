@@ -15,8 +15,8 @@ namespace Tetitulz.Pdf.WinForms.PdfViewer.Tests;
 /// <para><c>ProcessCmdKey</c> returned early whenever <c>IsTextEntryFocused()</c>, which is right
 /// for the shortcuts it was written for (Ctrl+C was copying the page selection over what the user
 /// was typing; Ctrl+O discarded a half-typed term) and took F3 with it as collateral — a behaviour
-/// change no commit message named, with the viewer README still advertising the key. GAPS.md §16
-/// item 7. The fix moves the two find keys ahead of the guard rather than removing it.</para>
+/// change no commit message named, with the viewer README still advertising the key. The fix moves
+/// the two find keys ahead of the guard rather than removing it.</para>
 /// <para><b>These test <c>ClassifyCmdKey</c> rather than <c>ProcessCmdKey</c>, and that is the
 /// second attempt.</b> The first drove the real thing: a parented, shown <see cref="Form"/> on an
 /// STA thread, asserting <c>IsTextEntryFocused()</c> was genuinely true before pressing the key.

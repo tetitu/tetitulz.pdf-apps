@@ -12,7 +12,7 @@ using Tetitulz.Pdf.Base.Rendering;
 namespace Tetitulz.Pdf.WinForms.PdfViewer.Tests;
 
 /// <summary>
-/// Printing's options (GAPS.md §10a step 4): the document's <c>/ViewerPreferences</c> starting the
+/// Printing's options: the document's <c>/ViewerPreferences</c> starting the
 /// dialog, fit or actual size, which annotations print, the pages a choice prints, and the filled
 /// form on paper.
 /// </summary>

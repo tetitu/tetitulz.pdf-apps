@@ -368,7 +368,7 @@ namespace Tetitulz.Pdf.WinForms.PdfViewer
         /// a 45-line text page at 96 dpi: the size check and the render as two one-shot calls cost
         /// 24 ms a page at 50 pages, 80 ms at 800 and 200 ms at 3 200; through a held session, 10 to
         /// 12 ms at every size. A page re-rendered at a new zoom costs the same either way in a small
-        /// document (GAPS §13b's measurement), so nothing is lost there.</para>
+        /// document, so nothing is lost there.</para>
         /// <para><b>One thread.</b> A session is not thread-safe; these belong to the thread that
         /// owns the control. A renderer on another thread opens its own over
         /// <see cref="ShownBytes"/>.</para>

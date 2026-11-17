@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Tetitulz.Pdf.WinForms.PdfViewer.Tests;
 
 /// <summary>
-/// The bookmarks tab (GAPS.md §10a step 3): each item in its style and open state, a click landing
+/// The bookmarks tab: each item in its style and open state, a click landing
 /// at its position, and the section being read selected as the view moves.
 /// </summary>
 public sealed class BookmarkSidebarTests
