@@ -25,7 +25,7 @@ env:
 
 jobs:
   build-test:
-    # Windows alone: the package targets net462 and net10.0-windows.
+    # Windows alone: the packages target net462 and net10.0-windows.
     runs-on: windows-latest
     timeout-minutes: 60
 
@@ -175,7 +175,7 @@ jobs:
           retention-days: 30
 
   release:
-    # A v* tag alone, after build-test is green: the package becomes a GitHub release. Nothing is
+    # A v* tag alone, after build-test is green: the packages become a GitHub release. Nothing is
     # pushed to a package feed.
     if: startsWith(github.ref, 'refs/tags/v')
     needs: [build-test]
@@ -198,4 +198,4 @@ jobs:
           prerelease=""
           case "${{ github.ref_name }}" in *-*) prerelease="--prerelease" ;; esac
           gh release create "${{ github.ref_name }}" release/* \
-            --title "Tetitulz.Pdf WinForms viewer ${{ github.ref_name }}" --generate-notes --verify-tag $prerelease
+            --title "Tetitulz.Pdf Windows packages ${{ github.ref_name }}" --generate-notes --verify-tag $prerelease

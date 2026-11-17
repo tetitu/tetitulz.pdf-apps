@@ -1,7 +1,7 @@
 <Project>
 
   <!--
-    Defaults for every project of this repository: the package, the demo and the tests. The library
+    Defaults for every project of this repository: the packages, the demo and the tests. The library
     under lib/tetitulz.pdf is built from its own sources, with its own Directory.Build.props: MSBuild
     takes the file nearest a project, so nothing set here reaches the library's projects.
   -->
@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Packaging">
-    <!-- The demo and the tests: not packages (src/Directory.Build.props makes the package one). -->
+    <!-- The demo and the tests: not packages (src/Directory.Build.props makes the packages ones). -->
     <IsPackable>false</IsPackable>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/tetitu/tetitulz.pdf-apps</RepositoryUrl>

@@ -1,7 +1,7 @@
-# Tetitulz.Pdf WinForms viewer — Contributor & Agent Guide
+# Tetitulz.Pdf Windows packages — Contributor & Agent Guide
 
-The WinForms viewer control, its demo host and its tests, built on the library in the
-`lib/tetitulz.pdf` submodule.
+The Windows packages (the WinForms viewer control, `Printing`), the viewer's demo host and their
+tests, built on the library in the `lib/tetitulz.pdf` submodule.
 
 **The library's rulebook applies here too**: [`lib/tetitulz.pdf/CLAUDE.md`](lib/tetitulz.pdf/CLAUDE.md),
 with its reasoning in `lib/tetitulz.pdf/CONTRIBUTING.md` — the coding conventions, the diagnostics
@@ -12,20 +12,22 @@ repository.
 
 | Path | Contents |
 |---|---|
-| `src/` | The package: `Tetitulz.Pdf.WinForms.PdfViewer` (`net462;net10.0-windows`) |
+| `src/` | The packages: `Tetitulz.Pdf.WinForms.PdfViewer` (`net462;net10.0-windows`), `Tetitulz.Pdf.Printing` (`net10.0-windows`) |
 | `demo/` | `Viewer`, a minimal host for the control; never packed |
-| `tests/` | The control's tests; `tests/ApiSnapshots` pins its public API |
+| `tests/` | One test project per package; `tests/ApiSnapshots` pins the packages' public API |
 | `lib/tetitulz.pdf` | The library, a submodule; every project references its sources |
 
-- **A change the viewer needs in the library is made in the library's repository**, pushed, then the
+- **A change a package needs in the library is made in the library's repository**, pushed, then the
   submodule moved and committed here. Nothing here edits `lib/`.
 - **`src/Directory.Build.props` and `.targets` import the library's `src/` ones**: a package here is
   held to the library's rules for a shipping assembly (packing, doc-comment and nullable errors, the
   licence files). Only the repository it names is this one.
 - **Package versions**: `Directory.Packages.props` imports the library's, then adds the few only this
   repository uses. A package both use has one version, the library's.
-- The library's guard tests scan the library's `src/` only. Here the package is guarded by its own
-  tests and API snapshot; the library's float-to-integer cast rule (`Core.Util.SaturatingCast`, never
+- **`Printing` references `Plugins.PostScript`** (a print job is PostScript); the library's rule that
+  the plugin references no feature keeps that edge acyclic.
+- The library's guard tests scan the library's `src/` only. Here the packages are guarded by their own
+  tests and API snapshots; the library's float-to-integer cast rule (`Core.Util.SaturatingCast`, never
   a cast) and its no-P/Invoke rule hold here by review.
 
 ## Testing the viewer
