@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- net462 so the control is consumable from a .NET Framework 4.6.2 host;
+         net10.0-windows for modern hosts. The library core (Base/Core) ships
+         netstandard2.0, which net462 consumes. -->
+    <TargetFrameworks>net462;net10.0-windows</TargetFrameworks>
+    <Description>A WinForms PDF viewer control for Tetitulz.Pdf: page navigation, zoom, text search and selection, with localisable chrome and RTL support.</Description>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Tetitulz.Pdf.WinForms.PdfViewer</RootNamespace>
+    <AssemblyName>Tetitulz.Pdf.WinForms.PdfViewer</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- XML-doc + nullable warnings shouldn't break the build. -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- WinForms tooling for the modern target. -->
+  <PropertyGroup Condition="'$(TargetFramework)' != 'net462'">
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <!-- .NET Framework 4.6.2 build: reference WinForms/Drawing GAC assemblies and
+       pull reference assemblies via NuGet so the build does not require the
+       4.6.2 targeting pack to be installed. -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net462" PrivateAssets="all" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Base\Tetitulz.Pdf.Base.csproj" />
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Core\Tetitulz.Pdf.Core.csproj" />
+    <!-- Decryption for password-protected PDFs (multi-targets netstandard2.0, so net462 can consume it). -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Encryption\Tetitulz.Pdf.Encryption.csproj" />
+    <!-- Verifying the document's signatures (PdfViewerFeatures.Signatures). -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Signing\Tetitulz.Pdf.Signing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Tetitulz.Pdf.WinForms.PdfViewer.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>

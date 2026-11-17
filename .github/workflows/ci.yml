@@ -1,0 +1,201 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+# The token reads the checkout and nothing else; the release job asks for what it needs.
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  # Picked up by Directory.Build.props to set ContinuousIntegrationBuild.
+  CI: true
+
+jobs:
+  build-test:
+    # Windows alone: the package targets net462 and net10.0-windows.
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    steps:
+      # Actions are pinned by commit SHA (the tag beside each is what the SHA was resolved from).
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # The library is the lib/tetitulz.pdf submodule; MinVer reads this repository's tags.
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Fetch the library's tags
+        # MinVer versions the library's projects from the submodule's own tags, and a packed package
+        # names them as dependencies at those versions; a submodule checkout fetches no tags.
+        run: git -C lib/tetitulz.pdf fetch --tags --force origin
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: |
+            Directory.Packages.props
+            lib/tetitulz.pdf/Directory.Packages.props
+            **/*.csproj
+
+      - name: Verify every package, demo and test project is in the solution
+        shell: pwsh
+        run: |
+          # A project missing from the solution is compiled by nothing, so a library move that breaks
+          # it goes unseen, and a package missing from it is never packed.
+          $missing = @()
+          Get-ChildItem -Path src, demo, tests -Recurse -Filter *.csproj |
+              Where-Object { $_.FullName -notmatch '[\\/](bin|obj)[\\/]' } | ForEach-Object {
+              if (-not (Select-String -Path tetitulz.pdf-apps.sln -SimpleMatch -Quiet -Pattern $_.Name)) {
+                  $missing += $_.FullName
+              }
+          }
+          if ($missing.Count -gt 0) {
+              Write-Host "::error::Projects missing from tetitulz.pdf-apps.sln:"
+              $missing | ForEach-Object { Write-Host "::error::  $_" }
+              exit 1
+          }
+
+      - name: Restore
+        run: dotnet restore tetitulz.pdf-apps.sln
+
+      - name: Audit dependencies for known vulnerabilities
+        shell: pwsh
+        run: |
+          $out = dotnet list tetitulz.pdf-apps.sln package --vulnerable --include-transitive 2>&1 | Out-String
+          $code = $LASTEXITCODE
+          Write-Host $out
+          if ($code -ne 0) { Write-Host "::error::dotnet list package --vulnerable failed (exit $code)."; exit 1 }
+          if ($out -match 'has the following vulnerable packages') { Write-Host "::error::Vulnerable packages detected."; exit 1 }
+
+      - name: Build (Release)
+        run: dotnet build tetitulz.pdf-apps.sln -c Release --no-restore
+
+      - name: Test
+        run: >
+          dotnet test tetitulz.pdf-apps.sln -c Release --no-build
+          --logger "trx;LogFilePrefix=test-results"
+          --results-directory ${{ github.workspace }}/TestResults
+
+      - name: Verify the test run actually completed
+        if: always()
+        shell: pwsh
+        run: |
+          # dotnet test prints "Passed!" for the tests that finished and says nothing about the ones
+          # that never ran, so each run is compared against itself, and every test project must
+          # have produced a result file.
+          $expected = (Get-ChildItem tests -Recurse -Filter '*.Tests.csproj').Count
+          $trx = Get-ChildItem -Path TestResults -Recurse -Filter *.trx -ErrorAction SilentlyContinue
+          if (-not $trx) { Write-Host "::error::No .trx files in TestResults."; exit 1 }
+          $bad = 0
+          foreach ($f in $trx) {
+              $x = [xml](Get-Content $f.FullName)
+              $summary = $x.TestRun.ResultSummary
+              [int]$total = $summary.Counters.total
+              $rows = @($x.TestRun.Results.UnitTestResult)
+              $broken = @($rows | Where-Object { $_.outcome -in 'Aborted', 'Error', 'Timeout', 'NotRunnable' })
+              if ($summary.outcome -in 'Aborted', 'Timeout', 'Error', 'Inconclusive') {
+                  $bad++; Write-Host "::error::$($f.Name): the run outcome is '$($summary.outcome)'."
+              } elseif ($rows.Count -ne $total) {
+                  $bad++; Write-Host "::error::$($f.Name): $($rows.Count) result rows for $total discovered tests."
+              } elseif ($broken.Count -gt 0) {
+                  $bad++; Write-Host "::error::$($f.Name): $($broken.Count) test(s) ended Aborted/Error/Timeout/NotRunnable."
+              } else {
+                  Write-Host ("  ok    {0,6} tests   {1}" -f $total, $f.Name)
+              }
+          }
+          if ($trx.Count -ne $expected) {
+              $bad++; Write-Host "::error::$($trx.Count) result file(s) for $expected test project(s)."
+          }
+          if ($bad -gt 0) { exit 1 }
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: test-results
+          path: TestResults/
+          retention-days: 14
+
+      - name: Pack
+        shell: pwsh
+        run: |
+          # Each package project on its own, letting the pack evaluate it: a package names the library
+          # projects it references at their MinVer versions, and a pack of the solution straight after
+          # its build has been seen to name Tetitulz.Pdf.Signing at 0.0.0-alpha.0.
+          foreach ($p in Get-ChildItem -Path src -Recurse -Filter *.csproj) {
+              dotnet pack $p.FullName -c Release -o ${{ github.workspace }}/artifacts
+              if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+          # A dependency on a library package at 0.0.0 is one no consumer can restore.
+          Add-Type -AssemblyName System.IO.Compression.FileSystem
+          $bad = @()
+          foreach ($n in Get-ChildItem artifacts -Filter *.nupkg) {
+              $z = [IO.Compression.ZipFile]::OpenRead($n.FullName)
+              try {
+                  $e = $z.Entries | Where-Object { $_.FullName -like '*.nuspec' }
+                  $r = New-Object IO.StreamReader($e.Open()); $x = [xml]$r.ReadToEnd(); $r.Dispose()
+              } finally { $z.Dispose() }
+              $x.package.metadata.dependencies.group.dependency |
+                  Where-Object { $_.id -like 'Tetitulz.Pdf.*' -and $_.version -like '0.0.0*' } |
+                  ForEach-Object { $bad += "$($n.Name): $($_.id) $($_.version)" }
+          }
+          if ($bad.Count -gt 0) { $bad | ForEach-Object { Write-Host "::error::$_" }; exit 1 }
+
+      - name: Verify only the src/ packages were packed
+        shell: pwsh
+        run: |
+          # An allow-list from the src/ tree: an app, a demo or a test that packs is refused.
+          $allowed = Get-ChildItem -Path src -Recurse -Filter *.csproj | ForEach-Object { $_.BaseName }
+          $packed = @(Get-ChildItem artifacts -Filter *.nupkg)
+          $unexpected = @($packed | Where-Object { $allowed -notcontains ($_.Name -replace '\.\d+\.\d+\.\d+.*\.nupkg$', '') })
+          if ($unexpected.Count -gt 0) { Write-Host "::error::Packed from outside src/: $($unexpected.Name -join ', ')"; exit 1 }
+          if ($packed.Count -ne $allowed.Count) { Write-Host "::error::$($packed.Count) package(s) for $($allowed.Count) src/ project(s)."; exit 1 }
+          $packed | ForEach-Object { Write-Host "packed: $($_.Name)" }
+
+      - name: Upload packages
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: nupkg
+          path: artifacts/*.nupkg
+          retention-days: 30
+
+  release:
+    # A v* tag alone, after build-test is green: the package becomes a GitHub release. Nothing is
+    # pushed to a package feed.
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [build-test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+
+    steps:
+      - name: Download the packages
+        run: |
+          gh run download "${{ github.run_id }}" --name nupkg --dir release
+
+      - name: Create the GitHub release
+        run: |
+          prerelease=""
+          case "${{ github.ref_name }}" in *-*) prerelease="--prerelease" ;; esac
+          gh release create "${{ github.ref_name }}" release/* \
+            --title "Tetitulz.Pdf WinForms viewer ${{ github.ref_name }}" --generate-notes --verify-tag $prerelease

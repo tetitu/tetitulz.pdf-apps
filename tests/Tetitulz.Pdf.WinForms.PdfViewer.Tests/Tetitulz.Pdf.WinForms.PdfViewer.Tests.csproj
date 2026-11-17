@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <AssemblyName>Tetitulz.Pdf.WinForms.PdfViewer.Tests</AssemblyName>
+    <RootNamespace>Tetitulz.Pdf.WinForms.PdfViewer.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Tetitulz.Pdf.WinForms.PdfViewer\Tetitulz.Pdf.WinForms.PdfViewer.csproj" />
+    <!-- Test-only: PublicApiSnapshot renders and compares this package's exported surface against
+         tests/ApiSnapshots/Tetitulz.Pdf.WinForms.PdfViewer.txt. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\tests\Tetitulz.Pdf.TestHelpers\Tetitulz.Pdf.TestHelpers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

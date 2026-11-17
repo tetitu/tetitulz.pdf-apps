@@ -1,0 +1,15 @@
+<Project>
+
+  <!--
+    Central package management. The library's versions are imported first, so a package both
+    repositories use (BouncyCastle, SkiaSharp, the test stack, MinVer) has one version across the
+    whole build; the few only this repository uses follow.
+  -->
+  <Import Project="lib\tetitulz.pdf\Directory.Packages.props" />
+
+  <ItemGroup Label="The package (the WinForms viewer control)">
+    <!-- Reference assemblies for the viewer's net462 leg, so the build needs no targeting pack installed. -->
+    <PackageVersion Include="Microsoft.NETFramework.ReferenceAssemblies.net462" Version="1.0.3" />
+  </ItemGroup>
+
+</Project>

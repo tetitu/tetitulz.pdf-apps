@@ -1,0 +1,6 @@
+# Every file is checked out byte for byte as committed, whatever core.autocrlf says (the library's rule).
+* -text
+
+*.ico binary
+*.png binary
+*.pdf binary

@@ -1,0 +1,3 @@
+[submodule "lib/tetitulz.pdf"]
+	path = lib/tetitulz.pdf
+	url = https://github.com/tetitu/tetitulz.pdf.git

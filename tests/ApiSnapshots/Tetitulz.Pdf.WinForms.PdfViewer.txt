@@ -1,0 +1,377 @@
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread::Facing : Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread::FacingWithCover : Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread = 2
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread::None : Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread::value__ : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPasswordRequiredException::.ctor(System.String)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling::ActualSize : Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling = 2
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling::Document : Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling::FitToPage : Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling::value__ : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfTextSelectionMode::ReadingOrder : Tetitulz.Pdf.WinForms.PdfViewer.PdfTextSelectionMode = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfTextSelectionMode::Rectangle : Tetitulz.Pdf.WinForms.PdfViewer.PdfTextSelectionMode = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfTextSelectionMode::value__ : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewLayoutMode::Continuous : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewLayoutMode = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewLayoutMode::SinglePage : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewLayoutMode = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewLayoutMode::value__ : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::ActualSize : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 10
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::Back : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 18
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::Copy : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 3
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::Find : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 2
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::FirstPage : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 16
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::FitPage : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 12
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::FitWidth : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 11
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::Forward : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 19
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::GoToPage : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 6
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::LastPage : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 17
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::NextPage : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 5
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::Open : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::PreviousPage : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 4
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::Print : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::RotateClockwise : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 21
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::RotateCounterclockwise : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 22
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::Save : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 15
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::SelectAll : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 20
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::SetPageSpread : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 23
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::SetZoom : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 9
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::ToggleLayout : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 13
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::ToggleSidebar : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 14
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::ZoomIn : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 7
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::ZoomOut : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand = 8
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand::value__ : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommandEventArgs::.ctor(Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand, System.Nullable<System.Int32> = default, System.Nullable<System.Double> = default)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommandEventArgs::Command : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommandEventArgs::Handled : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommandEventArgs::PageIndex : System.Nullable<System.Int32> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommandEventArgs::PageSpread : System.Nullable<Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommandEventArgs::Zoom : System.Nullable<System.Double> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::.ctor()
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::AccentColor : System.Drawing.Color { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ActualSize() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::AllowDrop : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::AnnounceStatusChanges : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::CanGoBack : System.Boolean { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::CanGoForward : System.Boolean { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ChangedFieldValues : System.Collections.Generic.IReadOnlyDictionary<System.String, System.String> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ClearSelection() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::CloseDocument() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::CommandExecuting : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommandEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::CopySelection() : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::CopyUsesLogicalOrder : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::CurrentPage : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Dispose(System.Boolean) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::DocumentLoaded : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLoadedEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Features : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::FieldSigned : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldSignedEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::FieldValueChanged : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangedEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::FieldValueChanging : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangingEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Find(System.String = default) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::FindHebrewFolding : Tetitulz.Pdf.Core.Text.HebrewFolding { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::FitPage() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::FitWidth() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::FormScriptBudget : System.TimeSpan { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::FormScriptMessage : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFormScriptEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::GetPageBox(System.Int32) : System.Drawing.RectangleF
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::GetPageRotation(System.Int32) : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::GoBack() : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::GoForward() : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::GoToPage(System.Int32) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::GoToPage(System.Int32, System.Nullable<System.Single>) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::HasDocument : System.Boolean { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::HighlightCurrentBookmark : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::HighlightFormFields : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::HonourPermissions : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::InvalidatePages() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::IsModified : System.Boolean { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::LayoutMode : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewLayoutMode { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::LinkClicked : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::LoadBytes(System.Byte[]) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::LoadFile(System.String) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::LoadStream(System.IO.Stream) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::NextPage() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::OnDpiChangedAfterParent(System.EventArgs) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::OnFontChanged(System.EventArgs) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::OnHandleCreated(System.EventArgs) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::OnLoad(System.EventArgs) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PageChanged : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageChangedEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PageCount : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PageMouseDown : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PageMouseMove : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PageMouseUp : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PageSpread : Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PaintOverlay : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerOverlayPaintEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Password : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PasswordRequested : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PreviousPage() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Print() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PrintAnnotations : Tetitulz.Pdf.Base.Rendering.AnnotationRendering { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PrintPreview() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::PrintScaling : Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ProcessCmdKey(ref System.Windows.Forms.Message&, System.Windows.Forms.Keys) : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::RenderPagesInBackground : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::RotateClockwise() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::RotateCounterclockwise() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SaveAs(System.IO.Stream) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SaveAs(System.String) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ScaleToDeviceDpi : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SelectPageText(System.Int32) : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SelectedText : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Selection : System.Collections.Generic.IReadOnlyList<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSelectedText> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SelectionChanged : System.EventHandler (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SetFieldValue(System.String, System.String) : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowComments : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowContextMenu : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowFindButton : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowFloatingControls : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowHistoryButtons : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowLayoutButton : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowLinkToolTips : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowNavigationControls : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowOpenButton : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowPrintButton : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowSaveButton : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowSidebar : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowSidebarButton : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowSignatureBanner : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowStatusBar : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowToolbar : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ShowZoomControls : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SignField(System.String, Tetitulz.Pdf.Signing.Models.SignatureParameters) : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SignatureClicked : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureClickedEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SignatureRequested : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureRequestEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SignatureResults : System.Collections.Generic.IReadOnlyList<Tetitulz.Pdf.Signing.Models.SignatureVerificationResult> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SignatureVerification : Tetitulz.Pdf.Signing.Models.SignatureVerificationOptions { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::SignaturesVerified : System.EventHandler<Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignaturesVerifiedEventArgs> (event)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Strings : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::TextSelectionMode : Tetitulz.Pdf.WinForms.PdfViewer.PdfTextSelectionMode { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Theme : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ToolbarStyle : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerToolbarStyle { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::TryClientToPage(System.Drawing.Point, out System.Int32&, out System.Drawing.PointF&) : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::TryClientToPage(System.Int32, System.Drawing.Point, out System.Drawing.PointF&) : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::TryPageToClient(System.Int32, System.Drawing.RectangleF, out System.Drawing.RectangleF&) : System.Boolean
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ViewRotation : System.Int32 { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::Zoom : System.Double { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ZoomIn() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ZoomMode : Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl::ZoomOut() : System.Void
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Bookmarks : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Comments : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 512
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Default : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 127
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::DocumentView : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 4096
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::FormFilling : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 128
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::FormScripts : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 256
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Links : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 8
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::None : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::OpenFile : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Print : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 64
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Search : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 2
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Signatures : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 1024
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Signing : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 2048
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::TextSelection : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 4
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::Thumbnails : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures = 16
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures::value__ : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangedEventArgs::.ctor(System.String, System.String)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangedEventArgs::FieldName : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangedEventArgs::Value : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangingEventArgs::.ctor(System.String, System.String, System.String)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangingEventArgs::Cancel : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangingEventArgs::FieldName : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangingEventArgs::NewValue : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangingEventArgs::OldValue : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldSignedEventArgs::.ctor(System.String, System.String)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldSignedEventArgs::Error : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldSignedEventArgs::FieldName : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFormScriptEventArgs::.ctor(System.String, System.String, System.Boolean)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFormScriptEventArgs::FieldName : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFormScriptEventArgs::IsRejection : System.Boolean { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFormScriptEventArgs::Message : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs::.ctor(Tetitulz.Pdf.Base.Operations.Extraction.PdfLinkKind, System.String, System.Int32)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs::File : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs::Handled : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs::Kind : Tetitulz.Pdf.Base.Operations.Extraction.PdfLinkKind { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs::NamedAction : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs::TargetPageIndex : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs::TargetTop : System.Nullable<System.Single> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs::Uri : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLoadedEventArgs::.ctor(System.Int32)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLoadedEventArgs::PageCount : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerOverlayPaintEventArgs::Graphics : System.Drawing.Graphics { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerOverlayPaintEventArgs::PageBounds : System.Drawing.Rectangle { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerOverlayPaintEventArgs::PageIndex : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerOverlayPaintEventArgs::Rotation : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerOverlayPaintEventArgs::ToCanvas(System.Drawing.RectangleF) : System.Drawing.RectangleF
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageChangedEventArgs::.ctor(System.Int32, System.Int32)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageChangedEventArgs::PageCount : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageChangedEventArgs::PageIndex : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs::Button : System.Windows.Forms.MouseButtons { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs::Cursor : System.Windows.Forms.Cursor { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs::Handled : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs::Location : System.Drawing.Point { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs::Modifiers : System.Windows.Forms.Keys { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs::PageIndex : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs::PagePoint : System.Drawing.PointF { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs::.ctor(System.Int32, System.Int32, System.Int32, System.Int32)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs::Attempt : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs::Cancel : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs::KeyLengthBits : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs::Password : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs::R : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs::V : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSelectedText::GlyphBoxes : System.Collections.Generic.IReadOnlyList<System.Drawing.RectangleF> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSelectedText::PageIndex : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSelectedText::Text : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureClickedEventArgs::.ctor(Tetitulz.Pdf.Signing.Models.SignatureVerificationResult, System.Int32)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureClickedEventArgs::Handled : System.Boolean { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureClickedEventArgs::PageIndex : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureClickedEventArgs::Result : Tetitulz.Pdf.Signing.Models.SignatureVerificationResult { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureRequestEventArgs::.ctor(System.String, System.Int32)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureRequestEventArgs::FieldName : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureRequestEventArgs::PageIndex : System.Int32 { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureRequestEventArgs::Parameters : Tetitulz.Pdf.Signing.Models.SignatureParameters { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignaturesVerifiedEventArgs::.ctor(System.Collections.Generic.IReadOnlyList<Tetitulz.Pdf.Signing.Models.SignatureVerificationResult>, System.String)
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignaturesVerifiedEventArgs::Error : System.String { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignaturesVerifiedEventArgs::Results : System.Collections.Generic.IReadOnlyList<Tetitulz.Pdf.Signing.Models.SignatureVerificationResult> { get }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::.ctor()
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::BackTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::BlockedLinkFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::BookmarksTab : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::BookmarksUnavailableFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::CommentsIncompleteFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::CommentsPageFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::CommentsTab : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::CopiedCharactersFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::CopyFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::CopyMenu : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::DocumentViewUnavailableFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::English() : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::ExternalFileLinkFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FieldSignedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FieldValueRefusedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FieldsNotDrawnFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Find : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FindBoxName : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FindCloseName : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FindNextName : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FindPreviousName : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FindResultFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FindResultSearchingFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FindResultTruncatedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FindTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FitPage : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FitPageTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FitWidth : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FitWidthTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FormFillFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FormScriptsFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::FormScriptsNotRunFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::ForwardTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Hebrew() : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Layout : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::LayoutSinglePage : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::LayoutTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::LinkFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::LinkToPageFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::LinksUnavailableFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::NextPageTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::NotFound : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Open : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::OpenFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::OpenFileFilter : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::OpenTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::OpenedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::OpenedWithTitleFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageBoxName : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageCannotRender : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageCountFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageCountUnknown : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageCountWithNumberFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageNotPrintedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PagePrintFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageSurfaceFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PageTooLargeFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PagesTab : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PreviousPageTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Print : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PrintJobName : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::PrintTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Ready : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::RotateClockwiseMenu : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::RotateCounterclockwiseMenu : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Save : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SaveFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SaveFileFilter : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SaveTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SavedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Searching : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SelectAllMenu : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SelectedCharactersFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::Sidebar : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SidebarTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureCertifies : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureChainFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureChangedAfter : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureInvalid : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureLocationFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureReasonFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureRevocationFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureSignedAtFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureStatusTitle : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureTimestampFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureUnknown : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureValid : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignatureWeakFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignaturesAllValid : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignaturesNotVerifiedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignaturesSomeInvalid : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignaturesSomeUnknown : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SignaturesTab : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SigningFailedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SpreadCoverMenu : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SpreadFacingMenu : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::SpreadNoneMenu : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::TextUnavailableFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::ThumbnailFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::ThumbnailsLimitedFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::UnsupportedLinkActionFormat : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::UntitledBookmark : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::ZoomBoxName : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::ZoomInTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings::ZoomOutTip : System.String { get; set }
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme::Dark : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme = 2
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme::Light : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme::System : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme::value__ : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerToolbarStyle::Icons : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerToolbarStyle = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerToolbarStyle::IconsAndText : Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerToolbarStyle = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerToolbarStyle::value__ : System.Int32
+Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode::Custom : Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode = 0
+Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode::FitPage : Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode = 2
+Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode::FitWidth : Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode = 1
+Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode::value__ : System.Int32
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfPasswordRequiredException
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommandEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerControl
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangedEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldChangingEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFieldSignedEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFormScriptEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLinkClickedEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerLoadedEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerOverlayPaintEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageChangedEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPageMouseEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerPasswordRequestedEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSelectedText
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureClickedEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignatureRequestEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerSignaturesVerifiedEventArgs
+class Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerStrings
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfPageSpread
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfPrintScaling
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfTextSelectionMode
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfViewLayoutMode
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerCommand
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerFeatures
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerTheme
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfViewerToolbarStyle
+enum Tetitulz.Pdf.WinForms.PdfViewer.PdfZoomMode

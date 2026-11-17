@@ -1,0 +1,19 @@
+# Build output
+bin/
+obj/
+/artifacts/
+/release/
+
+# IDE
+.vs/
+*.user
+*.suo
+
+# The agent's folder. Developer-local.
+/.claude/
+
+# The developer's own scripts and plans: not published.
+*.bat
+*.csx
+/PLAN*.md
+

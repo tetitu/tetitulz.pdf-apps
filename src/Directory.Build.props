@@ -1,0 +1,18 @@
+<Project>
+
+  <!--
+    The packages this repository ships (the WinForms viewer control) are held to the library's rules
+    for a shipping assembly: packed with their README, the library's licence texts and notices, the
+    XML documentation file, and the doc-comment defects that fail the build. Those rules are the
+    library's src/Directory.Build.props, imported from the submodule rather than copied, so the two
+    cannot drift; it imports the library's root props in turn (identity, MinVer). Only the repository
+    a package names is this one.
+  -->
+  <Import Project="..\lib\tetitulz.pdf\src\Directory.Build.props" />
+
+  <PropertyGroup Label="Packaging">
+    <PackageProjectUrl>https://github.com/tetitu/tetitulz.pdf-apps</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tetitu/tetitulz.pdf-apps</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

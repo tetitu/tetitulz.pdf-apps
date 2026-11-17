@@ -1,0 +1,22 @@
+# This repository's own packages (Directory.Packages.props; the library's versions are moved in the
+# library's repository), the GitHub Actions pinned by SHA, and the library submodule itself.
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+
+  - package-ecosystem: gitsubmodule
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday

@@ -1,0 +1,17 @@
+Tetitulz.Pdf
+Copyright (c) 2026 Tamir Mordo
+
+This product includes Tetitulz.Pdf, developed by Tamir Mordo
+(https://github.com/tetitu/tetitulz.pdf).
+
+Credit it as:
+
+    Uses Tetitulz.Pdf by Tamir Mordo.
+
+Tetitulz.Pdf is licensed under the Apache License, Version 2.0 (LICENSE),
+except the plugins Tetitulz.Pdf.Plugins.PostScript,
+Tetitulz.Pdf.Plugins.Maintenance and Tetitulz.Pdf.Plugins.PageEdits, which are
+under the Tetitulz.Pdf Attribution License (LICENSE-ATTRIBUTION.txt).
+
+Third-party components included in Tetitulz.Pdf, and their licenses, are
+listed in NOTICE.md and THIRD-PARTY.md.

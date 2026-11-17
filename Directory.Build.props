@@ -1,0 +1,39 @@
+<Project>
+
+  <!--
+    Defaults for every project of this repository: the package, the demo and the tests. The library
+    under lib/tetitulz.pdf is built from its own sources, with its own Directory.Build.props: MSBuild
+    takes the file nearest a project, so nothing set here reaches the library's projects.
+  -->
+
+  <PropertyGroup Label="Identity">
+    <Authors>Tamir Mordo</Authors>
+    <Company>Tamir Mordo</Company>
+    <Copyright>Copyright (c) 2026 Tamir Mordo</Copyright>
+    <Product>Tetitulz.Pdf</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Packaging">
+    <!-- The demo and the tests: not packages (src/Directory.Build.props makes the package one). -->
+    <IsPackable>false</IsPackable>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/tetitu/tetitulz.pdf-apps</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Reproducibility">
+    <Deterministic>true</Deterministic>
+    <!-- Set by CI (.github/workflows/ci.yml) so paths in the PDB are normalized. -->
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Versioning">
+    <!-- Versions come from this repository's v* tags; an untagged build is a prerelease. -->
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <MinVerDefaultPreReleaseIdentifiers>alpha.0</MinVerDefaultPreReleaseIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup Label="Versioning">
+    <PackageReference Include="MinVer" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,7 @@
+<Project>
+
+  <!-- The library's rules for a shipping assembly, after the project file: nullable warnings as errors
+       where <Nullable> is set, the doc-comment defects at zero, and the licence file a package carries. -->
+  <Import Project="..\lib\tetitulz.pdf\src\Directory.Build.targets" />
+
+</Project>
