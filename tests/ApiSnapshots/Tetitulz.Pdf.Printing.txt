@@ -1,0 +1,71 @@
+Tetitulz.Pdf.Printing.DocumentNames::Suggest(System.String) : System.String
+Tetitulz.Pdf.Printing.JobConverter::.ctor(System.String, System.String, System.Boolean)
+Tetitulz.Pdf.Printing.JobConverter::Clean(System.String) : System.String
+Tetitulz.Pdf.Printing.JobConverter::Convert(System.String, System.DateTime, System.String = default) : System.String
+Tetitulz.Pdf.Printing.JobConverter::SizeForPrintJobs() : System.Void
+Tetitulz.Pdf.Printing.JobConverter::UniquePath(System.String, System.String, System.String) : System.String
+Tetitulz.Pdf.Printing.JobListener::.ctor(System.String, System.String, Tetitulz.Pdf.Printing.SpoolerJobs, System.Func<Tetitulz.Pdf.Printing.ReceivedJob, System.Threading.Tasks.Task>)
+Tetitulz.Pdf.Printing.JobListener::RunAsync(System.Threading.CancellationToken) : System.Threading.Tasks.Task
+Tetitulz.Pdf.Printing.PipeAlreadyServedException::.ctor(System.String, System.Exception)
+Tetitulz.Pdf.Printing.PrinterIdentity::.ctor(System.String, System.String, System.String, System.String, System.String, System.String = default, System.String = default)
+Tetitulz.Pdf.Printing.PrinterIdentity::ClassDriverName : System.String = "Microsoft PS Class Driver"
+Tetitulz.Pdf.Printing.PrinterIdentity::DataFolder : System.String { get }
+Tetitulz.Pdf.Printing.PrinterIdentity::DriverName : System.String { get }
+Tetitulz.Pdf.Printing.PrinterIdentity::DriverPackage : System.String { get }
+Tetitulz.Pdf.Printing.PrinterIdentity::DriverSigner : System.String { get }
+Tetitulz.Pdf.Printing.PrinterIdentity::OutputFolder : System.String { get }
+Tetitulz.Pdf.Printing.PrinterIdentity::PipeName : System.String { get }
+Tetitulz.Pdf.Printing.PrinterIdentity::PrinterName : System.String { get }
+Tetitulz.Pdf.Printing.PrinterIdentity::TetitulzPdf : Tetitulz.Pdf.Printing.PrinterIdentity { get }
+Tetitulz.Pdf.Printing.PrinterSetup::.ctor(Tetitulz.Pdf.Printing.PrinterIdentity)
+Tetitulz.Pdf.Printing.PrinterSetup::AppData : System.String { get }
+Tetitulz.Pdf.Printing.PrinterSetup::Autostart() : System.String
+Tetitulz.Pdf.Printing.PrinterSetup::DefaultOutput : System.String { get }
+Tetitulz.Pdf.Printing.PrinterSetup::DefaultPrinterName : System.String { get }
+Tetitulz.Pdf.Printing.PrinterSetup::DriverName : System.String { get }
+Tetitulz.Pdf.Printing.PrinterSetup::Identity : Tetitulz.Pdf.Printing.PrinterIdentity { get }
+Tetitulz.Pdf.Printing.PrinterSetup::Install(System.String) : System.Int32
+Tetitulz.Pdf.Printing.PrinterSetup::InstalledDriver(System.String) : System.String
+Tetitulz.Pdf.Printing.PrinterSetup::IsInstalled(System.String) : System.Boolean
+Tetitulz.Pdf.Printing.PrinterSetup::ListenerMutexName : System.String { get }
+Tetitulz.Pdf.Printing.PrinterSetup::NeedsDriverUpdate(System.String) : System.Boolean
+Tetitulz.Pdf.Printing.PrinterSetup::PipeName : System.String { get }
+Tetitulz.Pdf.Printing.PrinterSetup::PortName : System.String { get }
+Tetitulz.Pdf.Printing.PrinterSetup::SetAutostart(System.String) : System.Void
+Tetitulz.Pdf.Printing.PrinterSetup::Uninstall(System.String) : System.Int32
+Tetitulz.Pdf.Printing.ReceivedJob::.ctor(System.String, System.DateTime, System.String, System.Int64)
+Tetitulz.Pdf.Printing.ReceivedJob::<Clone>$() : Tetitulz.Pdf.Printing.ReceivedJob
+Tetitulz.Pdf.Printing.ReceivedJob::Bytes : System.Int64 { get; set }
+Tetitulz.Pdf.Printing.ReceivedJob::Deconstruct(out System.String&, out System.DateTime&, out System.String&, out System.Int64&) : System.Void
+Tetitulz.Pdf.Printing.ReceivedJob::DocumentName : System.String { get; set }
+Tetitulz.Pdf.Printing.ReceivedJob::Equals(System.Object) : System.Boolean
+Tetitulz.Pdf.Printing.ReceivedJob::Equals(Tetitulz.Pdf.Printing.ReceivedJob) : System.Boolean
+Tetitulz.Pdf.Printing.ReceivedJob::GetHashCode() : System.Int32
+Tetitulz.Pdf.Printing.ReceivedJob::PostScriptPath : System.String { get; set }
+Tetitulz.Pdf.Printing.ReceivedJob::Received : System.DateTime { get; set }
+Tetitulz.Pdf.Printing.ReceivedJob::ToString() : System.String
+Tetitulz.Pdf.Printing.ReceivedJob::op_Equality(Tetitulz.Pdf.Printing.ReceivedJob, Tetitulz.Pdf.Printing.ReceivedJob) : System.Boolean
+Tetitulz.Pdf.Printing.ReceivedJob::op_Inequality(Tetitulz.Pdf.Printing.ReceivedJob, Tetitulz.Pdf.Printing.ReceivedJob) : System.Boolean
+Tetitulz.Pdf.Printing.SpooledJob::.ctor(System.String, System.String)
+Tetitulz.Pdf.Printing.SpooledJob::<Clone>$() : Tetitulz.Pdf.Printing.SpooledJob
+Tetitulz.Pdf.Printing.SpooledJob::Deconstruct(out System.String&, out System.String&) : System.Void
+Tetitulz.Pdf.Printing.SpooledJob::Equals(System.Object) : System.Boolean
+Tetitulz.Pdf.Printing.SpooledJob::Equals(Tetitulz.Pdf.Printing.SpooledJob) : System.Boolean
+Tetitulz.Pdf.Printing.SpooledJob::GetHashCode() : System.Int32
+Tetitulz.Pdf.Printing.SpooledJob::IsFromAnotherAccountThan(System.String) : System.Boolean
+Tetitulz.Pdf.Printing.SpooledJob::Name : System.String { get; set }
+Tetitulz.Pdf.Printing.SpooledJob::Submitter : System.String { get; set }
+Tetitulz.Pdf.Printing.SpooledJob::ToString() : System.String
+Tetitulz.Pdf.Printing.SpooledJob::op_Equality(Tetitulz.Pdf.Printing.SpooledJob, Tetitulz.Pdf.Printing.SpooledJob) : System.Boolean
+Tetitulz.Pdf.Printing.SpooledJob::op_Inequality(Tetitulz.Pdf.Printing.SpooledJob, Tetitulz.Pdf.Printing.SpooledJob) : System.Boolean
+Tetitulz.Pdf.Printing.SpoolerJobs::.ctor(System.String)
+Tetitulz.Pdf.Printing.SpoolerJobs::CurrentJob() : Tetitulz.Pdf.Printing.SpooledJob
+class Tetitulz.Pdf.Printing.DocumentNames
+class Tetitulz.Pdf.Printing.JobConverter
+class Tetitulz.Pdf.Printing.JobListener
+class Tetitulz.Pdf.Printing.PipeAlreadyServedException
+class Tetitulz.Pdf.Printing.PrinterIdentity
+class Tetitulz.Pdf.Printing.PrinterSetup
+class Tetitulz.Pdf.Printing.ReceivedJob
+class Tetitulz.Pdf.Printing.SpooledJob
+class Tetitulz.Pdf.Printing.SpoolerJobs

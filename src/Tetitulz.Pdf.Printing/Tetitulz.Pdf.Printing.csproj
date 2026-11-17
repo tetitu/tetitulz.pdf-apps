@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+      net10.0-windows alone: the printer's port is a named pipe this process must be the first to
+      make (PipeOptions.FirstPipeInstance), which .NET Framework's NamedPipeServerStream refuses and
+      only a P/Invoke could reach there — and library code carries none (NoLibraryPInvokeTests). A
+      net462 leg would serve the printer without that guarantee. System.Printing (the spooler's job
+      name) is WPF's, so the Windows desktop framework is referenced.
+    -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Tetitulz.Pdf.Printing</RootNamespace>
+    <AssemblyName>Tetitulz.Pdf.Printing</AssemblyName>
+    <Description>A Windows virtual PDF printer's machinery: a PostScript printer on a named-pipe port, its jobs received, named from the spooler and converted to PDF by the PostScript plugin; the printer installed and removed.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--
+      SANCTIONED architecture exception (see CLAUDE.md → Architecture). A print job is PostScript,
+      and this feature converts it through the PostScript plugin rather than duplicating it. The edge
+      is one-way and acyclic (Printing → Plugins.PostScript → Core); the plugin must never reference
+      this feature.
+    -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\plugins\Tetitulz.Pdf.Plugins.PostScript\Tetitulz.Pdf.Plugins.PostScript.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--
+      The install scripts beside the program that installs the printer: copied to a referencing
+      project's output, and packed as content every consumer's build copies there too.
+    -->
+    <None Include="install-printer.ps1;uninstall-printer.ps1" CopyToOutputDirectory="PreserveNewest"
+          Pack="true" PackagePath="contentFiles\any\any\" PackageCopyToOutput="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Tetitulz.Pdf.Printing.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>

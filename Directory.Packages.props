@@ -7,9 +7,11 @@
   -->
   <Import Project="lib\tetitulz.pdf\Directory.Packages.props" />
 
-  <ItemGroup Label="The package (the WinForms viewer control)">
+  <ItemGroup Label="The packages (the WinForms viewer control, Printing)">
     <!-- Reference assemblies for the viewer's net462 leg, so the build needs no targeting pack installed. -->
     <PackageVersion Include="Microsoft.NETFramework.ReferenceAssemblies.net462" Version="1.0.3" />
+    <!-- Printing logs through the Serilog API; the host chooses the sinks. -->
+    <PackageVersion Include="Serilog" Version="4.4.0" />
   </ItemGroup>
 
 </Project>

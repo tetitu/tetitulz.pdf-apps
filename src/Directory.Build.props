@@ -1,12 +1,12 @@
 <Project>
 
   <!--
-    The packages this repository ships (the WinForms viewer control) are held to the library's rules
-    for a shipping assembly: packed with their README, the library's licence texts and notices, the
-    XML documentation file, and the doc-comment defects that fail the build. Those rules are the
-    library's src/Directory.Build.props, imported from the submodule rather than copied, so the two
-    cannot drift; it imports the library's root props in turn (identity, MinVer). Only the repository
-    a package names is this one.
+    The packages this repository ships (the WinForms viewer control, Printing) are held to the
+    library's rules for a shipping assembly: packed with their README, the library's licence texts
+    and notices, the XML documentation file, and the doc-comment defects that fail the build. Those
+    rules are the library's src/Directory.Build.props, imported from the submodule rather than
+    copied, so the two cannot drift; it imports the library's root props in turn (identity, MinVer).
+    Only the repository a package names is this one.
   -->
   <Import Project="..\lib\tetitulz.pdf\src\Directory.Build.props" />
 
@@ -16,10 +16,10 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Versioning">
-    <!-- This repository's v* tags version the package, and MinVer must not hand it the library's
+    <!-- This repository's v* tags version its packages, and MinVer must not hand them the library's
          version instead. MinVer caches one version per build, keyed by its settings and not by the
          repository it read, so with the library's settings (prefix v, alpha.0) the first project to
-         ask decides for both repositories: the viewer once packed as the library's 1.1.5, and the
+         ask decides for both repositories: a package once packed as the library's 1.1.5, and the
          library's projects once as this repository's 0.0.0-alpha.0.N. A setting of our own, the
          identifier of an untagged build, gives this repository its own key. Keep it different from
          the library's. Directory.Build.props at the root sets the same for the demo and the tests. -->
