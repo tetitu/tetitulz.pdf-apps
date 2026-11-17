@@ -290,4 +290,4 @@ Publishing for one architecture (`dotnet publish -r win-x64`) keeps that archite
 
 ## Licence and provenance
 
-Apache License 2.0. Copyright (c) 2026 Tamir Mordo. Credit it as "Uses Tetitulz.Pdf by Tamir Mordo" (the package's NOTICE file). See the repository for the full guide, the open-gap register and the third-party notices.
+Apache License 2.0. Copyright (c) 2026 Tamir Mordo. Credit it as "Uses Tetitulz.Pdf by Tamir Mordo" (the package's NOTICE file). See the repository for the full guide and the third-party notices.
