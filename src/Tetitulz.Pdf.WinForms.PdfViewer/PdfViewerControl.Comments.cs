@@ -154,12 +154,12 @@ namespace Tetitulz.Pdf.WinForms.PdfViewer
             RunCommand(PdfViewerCommand.GoToPage, () =>
             {
                 SelectComment(c);
-                JumpTo(c.PageIndex, Top(c));
+                JumpTo(c.PageIndex, CommentTop(c));
             }, pageIndex: c.PageIndex);
         }
 
         /// <summary>A comment's top edge in user space, where going to it scrolls; null when it is not finite.</summary>
-        private static float? Top(PdfAnnotationInfo c)
+        private static float? CommentTop(PdfAnnotationInfo c)
         {
             double top = c.Y + c.Height;
             return double.IsNaN(top) || double.IsInfinity(top) || Math.Abs(top) > float.MaxValue ? (float?)null : (float)top;

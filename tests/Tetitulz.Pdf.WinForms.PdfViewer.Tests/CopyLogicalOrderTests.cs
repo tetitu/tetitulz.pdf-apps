@@ -221,7 +221,7 @@ public class CopyLogicalOrderTests
     {
         Assert.Equal("", PdfViewerControl.JoinSelectedGlyphsInLogicalOrder(
             new List<(PdfTextChar, RectangleF)>()));
-        Assert.Equal("", PdfViewerControl.JoinSelectedGlyphsInLogicalOrder(null));
+        Assert.Equal("", PdfViewerControl.JoinSelectedGlyphsInLogicalOrder(null!));
     }
 
     /// <summary>

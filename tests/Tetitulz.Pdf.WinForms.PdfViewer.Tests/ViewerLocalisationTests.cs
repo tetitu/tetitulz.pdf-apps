@@ -81,7 +81,7 @@ public sealed class ViewerLocalisationTests
         RunSta(() =>
         {
             using var ctrl = new PdfViewerControl();
-            string englishTip = ctrl.OpenButton.ToolTipText;
+            string? englishTip = ctrl.OpenButton.ToolTipText;
 
             ctrl.Strings = PdfViewerStrings.Hebrew();
 
@@ -104,7 +104,7 @@ public sealed class ViewerLocalisationTests
             using var ctrl = new PdfViewerControl();
             ctrl.Strings = PdfViewerStrings.Hebrew();
 
-            ctrl.Strings = null;
+            ctrl.Strings = null!;   // a host's reset, past the annotation
 
             Assert.NotNull(ctrl.Strings);
             Assert.Equal("Open", ctrl.OpenButton.Text);
@@ -143,7 +143,7 @@ public sealed class ViewerLocalisationTests
             {
                 if (english[i] != hebrew[i]) changed++;
 
-                foreach (string text in new[] { hebrew[i].Text, hebrew[i].ToolTipText })
+                foreach (string? text in new[] { hebrew[i].Text, hebrew[i].ToolTipText })
                     Assert.False(HasLatinWord(text),
                         $"toolbar item {i} still reads '{text}' after the strings were translated");
             }
@@ -171,8 +171,8 @@ public sealed class ViewerLocalisationTests
         {
             if (!property.CanWrite || property.PropertyType != typeof(string)) continue;
 
-            string from = (string)property.GetValue(english);
-            string to = (string)property.GetValue(hebrew);
+            string? from = (string?)property.GetValue(english);
+            string? to = (string?)property.GetValue(hebrew);
 
             if (!HasLatinWord(from)) continue;   // "/ {0}" and friends
 
@@ -219,7 +219,7 @@ public sealed class ViewerLocalisationTests
         RunSta(() =>
         {
             using var ctrl = new PdfViewerControl();
-            string before = ctrl.PageCountLabel.Text;
+            string? before = ctrl.PageCountLabel.Text;
 
             var strings = PdfViewerStrings.English();
             strings.PageCountUnknown = "no pages yet";
@@ -240,7 +240,7 @@ public sealed class ViewerLocalisationTests
     /// a Hebrew UI because they name keys and formats rather than describing anything, so the test
     /// looks for a Latin run that is not one of those.
     /// </remarks>
-    private static bool HasLatinWord(string text)
+    private static bool HasLatinWord(string? text)
     {
         if (string.IsNullOrEmpty(text)) return false;
 

@@ -157,13 +157,13 @@ public sealed class ChromeOptionsTests
             Assert.Equal(3, ctrl.ThumbnailItemCount);
 
             ctrl.Features &= ~PdfViewerFeatures.Thumbnails;
-            Assert.Equal(1, ctrl.SidebarTabs.TabPages.Count);
+            Assert.Single(ctrl.SidebarTabs.TabPages);
             Assert.Same(ctrl.BookmarkTree.Parent, ctrl.SidebarTabs.TabPages[0]);
             Assert.Equal(0, ctrl.ThumbnailItemCount);              // the strip is not built for a hidden tab
             Assert.False(ctrl.SidebarSplit.Panel1Collapsed);
 
             ctrl.Features &= ~PdfViewerFeatures.Bookmarks;
-            Assert.Equal(0, ctrl.SidebarTabs.TabPages.Count);
+            Assert.Empty(ctrl.SidebarTabs.TabPages);
             Assert.True(ctrl.SidebarSplit.Panel1Collapsed);
             Assert.False(ctrl.SidebarButton.Available);
             Assert.True(ctrl.ShowSidebar);                          // the host's own switch is kept
