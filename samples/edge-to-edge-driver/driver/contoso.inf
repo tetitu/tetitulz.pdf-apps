@@ -1,0 +1,45 @@
+; Contoso's printer driver: Windows' PostScript class driver (MSxpsPS.dll, in the system's driver
+; store) with its own printer description, whose pages have no hardware margins. A v4 driver:
+; only the description, the manifest and the filter pipeline are this package's.
+
+[Version]
+Signature="$Windows NT$"
+Class=Printer
+ClassGuid={4D36E979-E325-11CE-BFC1-08002BE10318}
+Provider=%Provider%
+CatalogFile=contoso.cat
+ClassVer=4.0
+PnpLockdown=1
+DriverVer=11/17/2026,1.0.0.0
+
+[Manufacturer]
+%Provider%=Contoso,NTamd64
+
+[Contoso.NTamd64]
+"Contoso PostScript Driver" = CONTOSO_PS,Contoso_PostScript_Driver
+
+[CONTOSO_PS]
+CopyFiles=CONTOSO_PS_FILES
+
+[CONTOSO_PS.Services]
+AddService = , 0x00000002
+
+[CONTOSO_PS_FILES]
+contoso.ppd
+contoso-manifest.ini
+contoso-pipelineconfig.xml
+
+[DestinationDirs]
+CONTOSO_PS_FILES=66000
+
+[SourceDisksNames.amd64]
+1 = %Disk1%
+
+[SourceDisksFiles]
+contoso.ppd                = 1
+contoso-manifest.ini       = 1
+contoso-pipelineconfig.xml = 1
+
+[Strings]
+Provider="Contoso"
+Disk1="Contoso printer driver"

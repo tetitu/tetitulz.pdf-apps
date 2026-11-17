@@ -14,6 +14,7 @@ repository.
 |---|---|
 | `src/` | The packages: `Tetitulz.Pdf.WinForms.PdfViewer` (`net462;net10.0-windows`), `Tetitulz.Pdf.Printing` (`net10.0-windows`) |
 | `demo/` | `Viewer`, a minimal host for the control; never packed |
+| `samples/` | `edge-to-edge-driver`, a template printer driver package for a product on `Printing`; not built, not packed |
 | `tests/` | One test project per package; `tests/ApiSnapshots` pins the packages' public API |
 | `lib/tetitulz.pdf` | The library, a submodule; every project references its sources |
 
