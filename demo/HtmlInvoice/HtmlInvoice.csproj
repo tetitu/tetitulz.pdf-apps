@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>HtmlInvoice</RootNamespace>
+    <AssemblyName>HtmlInvoice</AssemblyName>
+    <Description>A minimal demo: an English and a right-to-left Hebrew HTML invoice rendered to PDF by two engines - the managed one (no browser) and Chromium.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\features\Tetitulz.Pdf.HtmlToPdf\Tetitulz.Pdf.HtmlToPdf.csproj" />
+    <!-- The browser engine (Playwright), for the Chromium renders. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\plugins\Tetitulz.Pdf.Plugins.HtmlBrowser\Tetitulz.Pdf.Plugins.HtmlBrowser.csproj" />
+  </ItemGroup>
+
+</Project>

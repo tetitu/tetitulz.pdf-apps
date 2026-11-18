@@ -16,7 +16,10 @@ library is tried here by moving the submodule.
 Each is held to the library's rules for a shipping assembly (`src/Directory.Build.props` imports the
 library's), with its public API pinned under `tests/ApiSnapshots`.
 
-`demo/Viewer` is a minimal WinForms host for the control.
+`demo/Viewer` is a minimal WinForms host for the control. `demo/HtmlInvoice` is a console demo of HTML to
+PDF: an English invoice and a long right-to-left Hebrew one, each rendered by the managed engine (no
+browser) and by Chromium, with a footer on every page. Run it with `dotnet run --project
+demo/HtmlInvoice -- [output-directory]`; `--install` first downloads the Chromium build Playwright drives.
 [`samples/edge-to-edge-driver`](samples/edge-to-edge-driver/README.md) is a template printer driver
 package for a product built on `Printing`, whose pages print to the paper's edges.
 
