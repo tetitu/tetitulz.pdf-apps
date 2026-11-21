@@ -85,6 +85,20 @@ jobs:
       - name: Build (Release)
         run: dotnet build tetitulz.pdf-apps.sln -c Release --no-restore
 
+      - name: Run the demos
+        shell: pwsh
+        run: |
+          # A demo that stops compiling or working as the library moves is caught here. Each makes its
+          # own input and exits non-zero when what it shows did not happen. HtmlInvoice needs a browser
+          # download and Viewer a desktop, so neither is run.
+          foreach ($demo in 'QuickStart', 'FormFill', 'SignAndVerify') {
+              Write-Host "::group::$demo"
+              dotnet run --project demo/$demo -c Release --no-build -- "$env:RUNNER_TEMP/demos/$demo"
+              $code = $LASTEXITCODE
+              Write-Host "::endgroup::"
+              if ($code -ne 0) { Write-Host "::error::demo/$demo exited $code."; exit 1 }
+          }
+
       - name: Test
         run: >
           dotnet test tetitulz.pdf-apps.sln -c Release --no-build
