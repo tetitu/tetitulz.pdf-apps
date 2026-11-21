@@ -27,10 +27,11 @@ one but `Viewer` makes its own input, so none needs a file to start from.
 | [`QuickStart`](demo/QuickStart/Program.cs) | Start here: build a PDF in code (`DocumentBuilder`), render a page to PNG, extract its text, merge two documents (`PdfMerger`) |
 | [`FormFill`](demo/FormFill/Program.cs) | Add AcroForm fields (`PdfFormFieldBuilder`), list them, fill them with a Hebrew value drawn in a bundled font (`PdfOperations.FillForm`), then flatten |
 | [`SignAndVerify`](demo/SignAndVerify/Program.cs) | Sign at PAdES B-B (`PdfSigner`), or B-T with `--tsa <url>`; verify without and with a trust anchor, then watch an edit made after signing be caught |
+| [`PdfGallery`](demo/PdfGallery/Program.cs) | A folder of images (`--images <folder>`, or six it draws) into a PDF: one per A4 page, fitted and numbered (`PdfOperations.CreatePdfFromImages`, `AddHeaderFooter`), one per page at the image's own size, and a contact sheet of captioned thumbnails |
 | [`HtmlInvoice`](demo/HtmlInvoice/Program.cs) | HTML to PDF: an English invoice and a long right-to-left Hebrew one, by the managed engine (no browser) and by Chromium; `--install` first downloads the Chromium build Playwright drives |
 | [`Viewer`](demo/Viewer/MainForm.cs) | A minimal WinForms host for `PdfViewerControl` |
 
-CI runs `QuickStart`, `FormFill` and `SignAndVerify` on every build, so they keep compiling and working
+CI runs `QuickStart`, `FormFill`, `SignAndVerify` and `PdfGallery` on every build, so they keep compiling and working
 as the library moves.
 
 [`samples/edge-to-edge-driver`](samples/edge-to-edge-driver/README.md) is a template printer driver

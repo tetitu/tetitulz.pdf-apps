@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>PdfGallery</RootNamespace>
+    <AssemblyName>PdfGallery</AssemblyName>
+    <Description>A minimal demo: turn a folder of images into a PDF gallery, one image per page, plus a contact sheet of thumbnails.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Images to PDF pages, page-number footers; SkiaSharp comes with it, for the sample images and thumbnails. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Base\Tetitulz.Pdf.Base.csproj" />
+    <!-- The contact sheet. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\features\Tetitulz.Pdf.Builder\Tetitulz.Pdf.Builder.csproj" />
+  </ItemGroup>
+
+</Project>
