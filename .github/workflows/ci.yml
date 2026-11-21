@@ -91,7 +91,7 @@ jobs:
           # A demo that stops compiling or working as the library moves is caught here. Each makes its
           # own input and exits non-zero when what it shows did not happen. HtmlInvoice needs a browser
           # download and Viewer a desktop, so neither is run.
-          foreach ($demo in 'QuickStart', 'FormFill', 'SignAndVerify', 'PdfGallery') {
+          foreach ($demo in 'QuickStart', 'FormFill', 'SignAndVerify', 'PdfGallery', 'CompressPdf') {
               Write-Host "::group::$demo"
               dotnet run --project demo/$demo -c Release --no-build -- "$env:RUNNER_TEMP/demos/$demo"
               $code = $LASTEXITCODE
