@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>SignAndVerify</RootNamespace>
+    <AssemblyName>SignAndVerify</AssemblyName>
+    <Description>A minimal demo: sign a PDF (PAdES), verify it with and without a trust anchor, and see an edit after signing detected.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The document to sign. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\features\Tetitulz.Pdf.Builder\Tetitulz.Pdf.Builder.csproj" />
+    <!-- Sign and verify. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Signing\Tetitulz.Pdf.Signing.csproj" />
+  </ItemGroup>
+
+</Project>

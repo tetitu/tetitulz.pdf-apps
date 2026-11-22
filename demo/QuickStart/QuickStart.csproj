@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>QuickStart</RootNamespace>
+    <AssemblyName>QuickStart</AssemblyName>
+    <Description>A first demo: build a PDF in code, render a page to PNG, extract its text and merge two documents.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Build a document in code. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\features\Tetitulz.Pdf.Builder\Tetitulz.Pdf.Builder.csproj" />
+    <!-- Render, extract text, count pages. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Base\Tetitulz.Pdf.Base.csproj" />
+    <!-- Merge. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\plugins\Tetitulz.Pdf.Plugins.PageEdits\Tetitulz.Pdf.Plugins.PageEdits.csproj" />
+  </ItemGroup>
+
+</Project>

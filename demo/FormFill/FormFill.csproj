@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>FormFill</RootNamespace>
+    <AssemblyName>FormFill</AssemblyName>
+    <Description>A minimal demo: add AcroForm fields to a PDF, list them, fill them (a Hebrew value included) and flatten the result.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The blank page the form is drawn on. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\features\Tetitulz.Pdf.Builder\Tetitulz.Pdf.Builder.csproj" />
+    <!-- Create, read, fill and flatten form fields. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\tetitulz.pdf\Tetitulz.Pdf.Base\Tetitulz.Pdf.Base.csproj" />
+    <!-- A Hebrew font (Noto Sans Hebrew, OFL) for the Hebrew value. -->
+    <ProjectReference Include="..\..\lib\tetitulz.pdf\src\plugins\Tetitulz.Pdf.Plugins.Fonts\Tetitulz.Pdf.Plugins.Fonts.csproj" />
+  </ItemGroup>
+
+</Project>
